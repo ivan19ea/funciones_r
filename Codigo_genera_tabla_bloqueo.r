@@ -9,6 +9,17 @@ rename(df, tormenta = storm, viento = wind, presion = pressure, fecha = date )
 # concatenar dia, mes y año si es necesario
 df$bdate <- paste(df$dia, df$mes, df$año)
 
+# separa dia mes y año si es necesario
+library(tidyverse)
+library(lubridate)
+
+# Fake data
+x = data.frame(date=c("2018 - 01 - 04", "2018 - 02 - 16"))
+
+x = x %>% 
+  mutate(date = ymd(date)) %>% 
+  mutate_at(vars(date), funs(year, month, day))
+
 # transforma formato de fecha de nacimiento
 df$date <- format(as.Date(df$date), "%Y/%m/%d")
 
