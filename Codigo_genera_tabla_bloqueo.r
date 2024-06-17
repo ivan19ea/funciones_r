@@ -1,6 +1,16 @@
 
 
 library(sqldf)
+library(dplyr
+
+# transforma nombres de variables para que sean las mismas (primero las que quieres, luego las og)
+rename(df, tormenta = storm, viento = wind, presion = pressure, fecha = date )
+
+# concatenar dia, mes y año si es necesario
+df$bdate <- paste(df$dia, df$mes, df$año)
+
+# transforma formato de fecha de nacimiento
+df$date <- format(as.Date(df$date), "%Y/%m/%d")
 
 #Reemplazar nombres de las variables
 resultado_ensanut_06_pares <- sqldf('select b.*, c.* from bloqueo_fin as a left join 
