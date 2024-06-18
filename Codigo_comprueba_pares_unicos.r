@@ -1,11 +1,15 @@
 #crear llave pares
-llave <- paste(bloqueo_ejemplo$id1,'_',bloqueo_ejemplo$id2, sep="")
+df$llave <- paste(bloqueo_ejemplo$id1,'_',bloqueo_ejemplo$id2, sep="")
  
 head(llave)
 
 #verificar cuantos pares unicos tenemos
 length( unique(llave) )
 
+#borrar pares duplicados
+df[!duplicated(df$llave), ]
+# o 
+df %>% distinct(id1, id2, .keep_all = TRUE)
 
 max(bloqueo_ejemplo$VER)
 min(bloqueo_ejemplo$VER)
