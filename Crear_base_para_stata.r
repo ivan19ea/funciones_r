@@ -27,4 +27,6 @@ install.packages("RecordLinkage")
    resultado_ensanut_06_pares$s3  <- ifelse(resultado_ensanut_06_pares$ANIO_NAC_EN==resultado_ensanut_06_pares$ANIO_NAC_IN,1,0)
 
    ID_ENSANUT, ID_INEGI, S1, S2, .... S8 SCORE
-   
+
+# guarda como CSV grande
+write.csv(df, "specify_path_and_file_name.csv")
