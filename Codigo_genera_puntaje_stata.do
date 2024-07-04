@@ -12,7 +12,7 @@
 
 
 
-emlink , tol(6) priorp(.07) save("C:\resultado_vin\puntajes7_all250624fin") score(puntaje)
+emlink , tol(6) priorp(.07) save("directorio") score(puntaje)
 
 
 
@@ -122,8 +122,7 @@ syntax, tol(numlist) priorp(numlist) save(string) score(string)
 	n: di "w`x' unmatch = " `w`x'u'		
 	}
 	* Calculate score 
-	gen double `score' = s1*`w1m'+(1-s1)*`w1u' + s2*`w2m'+(1-s2)*`w2u' + s3*`w3m'+(1-s3)*`w3u' + ///
-		s4*`w4m'+(1-s4)*`w4u' + s5*`w5m'+(1-s5)*`w5u' + s6*`w6m'+(1-s6)*`w6u' + s7*`w7m'+(1-s7)*`w7u'  + s8*`w8m'+(1-s8)*`w8u'
+	gen double `score' = s1*`w1m'+(1-s1)*`w1u' + s2*`w2m'+(1-s2)*`w2u' + s3*`w3m'+(1-s3)*`w3u' + s4*`w4m'+(1-s4)*`w4u' + s5*`w5m'+(1-s5)*`w5u' + s6*`w6m'+(1-s6)*`w6u' + s7*`w7m'+(1-s7)*`w7u'  + s8*`w8m'+(1-s8)*`w8u'
 end
 
 * Example:
