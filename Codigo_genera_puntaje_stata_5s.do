@@ -49,7 +49,7 @@ syntax, tol(numlist) priorp(numlist) save(string) score(string)
 	local N = r(N)
 	* Iterations
 	local h = 0
-	while `tolm1'==0 | `tolm2'==0 | `tolm3'==0 | `tolm4'==0 | `tolm5'==0 | `tolm6'==0 | `tolm7'==0  | `tolu1'==0 | `tolu2'==0 | `tolu3'==0 | `tolu4'==0 | `tolu5'==0  {
+	while `tolm1'==0 | `tolm2'==0 | `tolm3'==0 | `tolm4'==0 | `tolm5'==0  | `tolu1'==0 | `tolu2'==0 | `tolu3'==0 | `tolu4'==0 | `tolu5'==0  {
 		local h = `h'+1
 		local r = `h'-1
 		di "Iteration `h':"
